@@ -21,6 +21,10 @@ public abstract class EncryptRunner {
         return getName();
     }
 
+    public Map<Integer, String> getKeyNameTipMap() {
+        return null;
+    }
+
     public Map<Integer, List<String>> getKeyOptionalValMap() {
         return null;
     }
