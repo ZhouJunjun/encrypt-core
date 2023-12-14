@@ -9,13 +9,10 @@ import java.util.Map;
  * @date 2023/3/30
  */
 public abstract class EncryptRunner {
+
     abstract public String getName();
 
     abstract public List<String> getKeyNameList();
-
-    abstract public Map<Integer, String> getKeyDefaultValMap();
-
-    abstract public Map<Integer, List<String>> getKeyOptionalValMap();
 
     abstract public byte[] run(byte[] input, Charset charset, List<String> keyList) throws Exception;
 
@@ -24,7 +21,11 @@ public abstract class EncryptRunner {
         return getName();
     }
 
-    public boolean isResultCanBeConvertedToString() {
-        return false;
+    public Map<Integer, List<String>> getKeyOptionalValMap() {
+        return null;
+    }
+
+    public Map<Integer, String> getKeyDefaultValMap() {
+        return null;
     }
 }
