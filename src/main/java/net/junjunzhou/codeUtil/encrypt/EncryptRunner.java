@@ -15,10 +15,16 @@ public abstract class EncryptRunner {
 
     abstract public Map<Integer, String> getKeyDefaultValMap();
 
+    abstract public Map<Integer, List<String>> getKeyOptionalValMap();
+
     abstract public byte[] run(byte[] input, Charset charset, List<String> keyList) throws Exception;
 
     @Override
     public String toString() {
         return getName();
+    }
+
+    public boolean isResultCanBeConvertedToString() {
+        return false;
     }
 }
