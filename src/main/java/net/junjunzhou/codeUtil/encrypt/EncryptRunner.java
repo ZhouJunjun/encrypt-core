@@ -32,4 +32,8 @@ public abstract class EncryptRunner {
     public Map<Integer, String> getKeyDefaultValMap() {
         return null;
     }
+
+    public Map<Integer, Boolean>getKeyFilePathSupport(){
+        return null;
+    }
 }
